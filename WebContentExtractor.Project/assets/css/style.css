@@ -1,0 +1,207 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.input-box {
+    position: relative;
+    height: 76px;
+    max-width: 900px;
+    width: 100%;
+    background: #fff;
+    margin: auto;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+    .input-box i,
+    .input-box .button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .input-box i {
+        left: 20px;
+        font-size: 30px;
+        color: #707070;
+    }
+
+    .input-box input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        font-size: 18px;
+        font-weight: 400;
+        border: none;
+        padding: 0 15px 0 15px;
+        background-color: transparent;
+    }
+
+    .input-box .button {
+        right: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 6px;
+        background-color: #428bca;
+        cursor: pointer;
+    }
+
+        .input-box .button:active {
+            transform: translateY(-50%) scale(0.98);
+        }
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .input-box {
+        height: 66px;
+        margin: 0 8px;
+    }
+
+        .input-box i {
+            left: 12px;
+            font-size: 25px;
+        }
+
+        .input-box input {
+            padding: 0 112px 0 50px;
+        }
+
+        .input-box .button {
+            right: 12px;
+            font-size: 14px;
+            padding: 8px 18px;
+        }
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 2.4em;
+    color: #83838a;
+    margin-bottom:30px;
+}
+
+.rwd-table {
+    margin: auto;
+    margin-bottom: 50px;
+    min-width: 80%;
+    max-width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+    .rwd-table tr:first-child {
+        border-top: none;
+        background: #428bca;
+        color: #fff;
+    }
+
+    .rwd-table tr {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        background-color: #f5f9fc;
+    }
+
+        .rwd-table tr:nth-child(odd):not(:first-child) {
+            background-color: #ebf3f9;
+        }
+
+    .rwd-table th {
+        display: none;
+    }
+
+    .rwd-table td {
+        display: block;
+    }
+
+        .rwd-table td:first-child {
+            margin-top: .5em;
+        }
+
+        .rwd-table td:last-child {
+            margin-bottom: .5em;
+        }
+
+        .rwd-table td:before {
+            content: attr(data-th) ": ";
+            font-weight: bold;
+            width: 120px;
+            display: inline-block;
+            color: #000;
+        }
+
+    .rwd-table th,
+    .rwd-table td {
+        text-align: left;
+    }
+
+.rwd-table {
+    color: #333;
+    border-radius: .4em;
+    overflow: hidden;
+}
+
+    .rwd-table tr {
+        border-color: #bfbfbf;
+    }
+
+    .rwd-table th,
+    .rwd-table td {
+        padding: .5em 1em;
+    }
+
+@media screen and (max-width: 601px) {
+    .rwd-table tr:nth-child(2) {
+        border-top: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .rwd-table tr:hover:not(:first-child) {
+        background-color: #d8e7f3;
+    }
+
+    .rwd-table td:before {
+        display: none;
+    }
+
+    .rwd-table th,
+    .rwd-table td {
+        display: table-cell;
+        padding: .25em .5em;
+    }
+
+        .rwd-table th:first-child,
+        .rwd-table td:first-child {
+            padding-left: 0;
+        }
+
+        .rwd-table th:last-child,
+        .rwd-table td:last-child {
+            padding-right: 0;
+        }
+
+    .rwd-table th,
+    .rwd-table td {
+        padding: 1em !important;
+    }
+}
+
+.error-state{
+    padding-top: 50px;
+    color: red;
+}
