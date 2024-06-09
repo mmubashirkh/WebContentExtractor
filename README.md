@@ -1,7 +1,7 @@
 # WebContentExtractor
 
 #Steps to follow
-1. Download the project "WebContentExtractor" from Repository .
+1. Download or clone the project "WebContentExtractor" from Repository .
 2. Execute the project.
 3. Screen will show up with a field to enter URL.
 4. Enter the URL and click on search
