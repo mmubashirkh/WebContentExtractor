@@ -1,0 +1,54 @@
+﻿@model WebContentExtractor.Project.Models.WebContentModel
+
+
+@using (Html.BeginForm("Index", "WebContentExtractor", FormMethod.Post))
+{
+    <div class="input-box">
+        @Html.TextBoxFor(m => m.TargetUrl, new { placeholder = "Please Enter Target Url" })
+        @Html.ValidationMessageFor(m => m.TargetUrl, "", new { @class = "error-state" })
+        <button class="button" type="submit">Search</button>
+    </div>
+}
+
+@if (Model != null)
+{
+    if (Model.NumberOfWordsOccurence != null)
+    {
+        <h1>Total Word Count : @Model.TotalWordCount</h1>
+        <table class="rwd-table">
+            <tbody>
+                <tr>
+                    <th>Words</th>
+                    <th>Occurence</th>
+                </tr>
+                @foreach (var item in Model.NumberOfWordsOccurence)
+                {
+                    <tr>
+                        <td>@item.Key</td>
+                        <td>@item.Value</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    if (Model.ImageUrls != null)
+    {
+        <div class="row">
+            @foreach (var imageUrl in Model.ImageUrls)
+            {
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img src="@imageUrl" style="width:100%">
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <h1>@Model.ErrorMessage</h1>
+    }
+}
+
+
