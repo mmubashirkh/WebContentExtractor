@@ -2,10 +2,11 @@
 
 #Steps to follow
 1. Download or clone the project "WebContentExtractor" from Repository .
-2. Execute the project.
-3. Screen will show up with a field to enter URL.
-4. Enter the URL and click on search
-5. It will return Total Count , Top 10 occuring words and how many times it occured and also show images in form of tiles.
+2. Clean and build the solution
+3. Run the project.
+4. Screen will show up with a field to enter URL.
+5. Enter the URL and click on search
+6. It will return Total Count , Top 10 occuring words and how many times it occured and also show images in form of tiles.
 
 #Custom Validation
 - Added a custom field validation attribute "HttpsUrl". It validates if the URL entered is not HTTPS it shows a message to user and ivalidate the form.
