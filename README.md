@@ -15,3 +15,6 @@
 
 #Library
 - Added a Class Library "WebContentExtractor.Common" to keep common code separated and can be extended in future.
+
+#Dsiplay Top 10 Occuring Words
+- In web.config there is a key "TopCount" to set the value of results to be shown. Currently it is set to deault value of 10.
